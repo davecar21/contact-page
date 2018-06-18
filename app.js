@@ -36,7 +36,7 @@ const mailOptions = {
     from: '"Davecar" <davecargrave21@gmail.com>', // sender address
     to: 'davecargrave21@gmail.com', // list of receivers
     subject: 'Subject of your email', // Subject line
-    html: '<p>Your TEST here</p>' // plain text body
+    html: '<p>Test FROM GMAIL here</p>' // plain text body
 };
 
 transporter.sendMail(mailOptions, function(err, info) {
