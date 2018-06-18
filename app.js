@@ -21,10 +21,10 @@ app.listen(process.env.PORT || 8080);
 
 
 var transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: 'yahoo',
     secure: false,
     auth: {
-        user: 'davecargrave21@gmail.com',
+        user: 'davecargrave21@yahoo.com',
         pass: 'Dav3car21'
     },
     tls: {
@@ -33,7 +33,7 @@ var transporter = nodemailer.createTransport({
 });
 
 const mailOptions = {
-    from: '"Davecar" <davecargrave21@gmail.com>', // sender address
+    from: '"Davecar" <davecargrave21@yahoo.com>', // sender address
     to: 'davecargrave21@gmail.com', // list of receivers
     subject: 'Subject of your email', // Subject line
     html: '<p>Your TEST here</p>' // plain text body
