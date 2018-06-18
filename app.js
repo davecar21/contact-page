@@ -21,7 +21,7 @@ app.listen(process.env.PORT || 8080);
 
 
 var transporter = nodemailer.createTransport({
-    service: 'yahoo',
+    service: 'gmail',
     secure: true,
     auth: {
         user: 'davecargrave21@gmail.com',
