@@ -29,7 +29,7 @@ app.listen(process.env.PORT || 8080);
     });
 
     const mailOptions = {
-        from: 'davecargrave@gmail.com', // sender address
+        from: 'Davecar <davecargrave@gmail.com>', // sender address
         to: 'davecargrave@gmail.com', // list of receivers
         subject: 'Subject of your email', // Subject line
         html: '<p>Your TEST here</p>' // plain text body
