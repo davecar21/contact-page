@@ -23,14 +23,14 @@ app.listen(process.env.PORT || 8080);
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'davecargrave@gmail.com',
+            user: 'davecargrave21@gmail.com',
             pass: 'Dav3car21'
         }
     });
 
     const mailOptions = {
-        from: 'Davecar <davecargrave@gmail.com>', // sender address
-        to: 'davecargrave@gmail.com', // list of receivers
+        from: 'Davecar <davecargrave21@gmail.com>', // sender address
+        to: 'davecargrave21@gmail.com', // list of receivers
         subject: 'Subject of your email', // Subject line
         html: '<p>Your TEST here</p>' // plain text body
     };
