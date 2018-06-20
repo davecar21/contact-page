@@ -20,8 +20,8 @@ export class FormComponent implements OnInit {
 
   formMessage = 'Fill up the form';
   sendMail() {
+    this.contactForm.reset();
     setTimeout(function() {
-      this.contactForm.reset();
       this.formMessage = 'Email Sent!';
     }, 500);
     setTimeout(function() {
