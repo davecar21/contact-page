@@ -31,7 +31,7 @@ export class FormComponent implements OnInit {
     const headers = new HttpHeaders()
     .set('Authorization', 'my-auth-token')
     .set('Content-Type', 'application/json');
-    this.http.post('/send-mail', JSON.stringify(this.contactForm.value), {
+    this.http.post('/send-mail', this.contactForm.value, {
     headers: headers
     })
     .subscribe(data => {
