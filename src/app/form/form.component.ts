@@ -18,7 +18,16 @@ export class FormComponent implements OnInit {
     emailAddress: new FormControl(),
   });
 
+  formMessage = 'Fill up the form';
   sendMail() {
+    setTimeout(function() {
+      this.contactForm.reset();
+      this.formMessage = 'Email Sent!';
+    }, 500);
+    setTimeout(function() {
+      this.formMessage = 'Fill up the form';
+    }, 2000);
+
     const headers = new HttpHeaders()
     .set('Authorization', 'my-auth-token')
     .set('Content-Type', 'application/json');

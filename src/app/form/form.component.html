@@ -1,17 +1,17 @@
+{{formMessage}}
 <form method="POST" [formGroup]="contactForm" (ngSubmit)="sendMail()">
     <div class="form-field">
-        <label for=""></label><input type="text" formControlName="firstName">
+        <label for="">First Name:</label><input type="text" formControlName="firstName">
     </div>
     <div class="form-field">
-        <label for=""></label><input type="text" formControlName="lastName">
+        <label for="">Last Name:</label><input type="text" formControlName="lastName">
     </div>
     <div class="form-field">
-        <label for=""></label><input type="email" formControlName="emailAddress">
+        <label for="">Your Email Address:</label><input type="email" formControlName="emailAddress">
     </div>
     <div class="form-field">
-        <label for=""></label><input type="text" formControlName="message">
+        <label for="">Message:</label><input type="text" formControlName="message">
     </div>
     <input type="submit">
 </form>
-
 {{contactForm.value | json}}
