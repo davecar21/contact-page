@@ -1,12 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component';
 
 const appRoutes: Routes = [
-  { path: '', component: AppComponent },
-  { path: 'forms', component: FormComponent }
+  { path: '', component: AppComponent }
 ];
 
 @NgModule({
@@ -16,6 +18,8 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [],
