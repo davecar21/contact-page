@@ -20,12 +20,6 @@ export class FormComponent implements OnInit {
 
   formMessage = 'Fill up the form';
   sendMail() {
-    this.contactForm.reset();
-    this.formMessage = 'Email Sent!';
-    setTimeout(function() {
-      this.formMessage = 'Fill up the form';
-    }, 3000);
-
     const headers = new HttpHeaders()
     .set('Authorization', 'my-auth-token')
     .set('Content-Type', 'application/json');
@@ -35,6 +29,12 @@ export class FormComponent implements OnInit {
     .subscribe(data => {
       console.log(data);
     });
+
+    this.contactForm.reset();
+    this.formMessage = 'Email Sent!';
+    setTimeout(() => {
+      this.formMessage = 'Fill up the form';
+    }, 3000);
   }
 
   ngOnInit() {
