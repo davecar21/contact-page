@@ -21,17 +21,15 @@ export class FormComponent implements OnInit {
   formMessage = 'Fill up the form';
   sendMail() {
     this.contactForm.reset();
-    setTimeout(function() {
-      this.formMessage = 'Email Sent!';
-    }, 500);
+    this.formMessage = 'Email Sent!';
     setTimeout(function() {
       this.formMessage = 'Fill up the form';
-    }, 2000);
+    }, 3000);
 
     const headers = new HttpHeaders()
     .set('Authorization', 'my-auth-token')
     .set('Content-Type', 'application/json');
-    this.http.post('/send-mail', this.contactForm.value, {
+    this.http.post('/send-mail', JSON.stringify(this.contactForm.value), {
     headers: headers
     })
     .subscribe(data => {
